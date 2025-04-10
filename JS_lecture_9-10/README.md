@@ -8,14 +8,14 @@
 
 ## 4. Метод filter() -done
 
-## 5. Метод find()
+## 5. Метод find() -done
 
-## 6. Метод findIndex()
+## 6. Метод findIndex() -done
 
-## 7. Методи every() і some()
+## 7. Методи every() і some() -done
 
-## 8. Метод reduce()
+## 8. Метод reduce() -done
 
-## 9. Метод sort()
+## 9. Метод sort() -done
 
-## 10. Ланцюжки методів
+## 10. Ланцюжки методів -done

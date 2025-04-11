@@ -264,15 +264,14 @@
 //       super(email);
 //       this.posts = posts;
 //     }
-  
+
 //     addPost(post) {
 //       this.posts.push(post);
 //     }
 //   }
-  
+
 //   const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
 //   console.log(editor); // { email: 'mango@mail.com', posts: [] }
 //   console.log(editor.email); // 'mango@mail.com'
 //   editor.addPost("post-1");
 //   console.log(editor.posts); // ['post-1']
-  

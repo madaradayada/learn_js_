@@ -1,50 +1,35 @@
-//  Прототипне наслідування
+// Створення та видалення елементів
 
-// Прототип об'єкта
+// document.createElement(tagName);
 
-const animal = {
-  legs: 4,
-};
-const dog = Object.create(animal);
-dog.name = "Манго";
+const heading = document.createElement("h1");
+console.log(heading); // <h1></h1>
 
-console.log(dog); // { name: 'Манго', __proto__: animal }
-console.log(animal.isPrototypeOf(dog)); // true
+heading.textContent = "This is a heading";
+console.log(heading); // <h1>This is a heading</h1>
 
-console.log(dog.hasOwnProperty("name")); // true
-console.log(dog.name); // 'Манго'
+const image = document.createElement("img");
+image.src = "https://picsum.photos/id/15/320/240";
+image.alt = "Nature";
+console.log(image); // <img src="https://picsum.photos/id/15/320/240" alt="Nature" />
 
-console.log(dog.hasOwnProperty("legs")); // false
-console.log(dog.legs); // 4
+// Додавання
 
-// Метод hasOwnProperty()
+// const list = document.querySelector(".usernames");
 
-// const animal = { eats: true };
-// const dog = Object.create(animal);
-// dog.barks = true;
+// // Adds an item to the end of the list
+// const lastItem = document.createElement("li");
+// lastItem.textContent = "Poly";
+// list.append(lastItem);
 
-// for (const key in dog) {
-//   console.log(key); // barks, eats
-// }
+// // Adds an item to the beginning of the list
+// const firstItem = document.createElement("li");
+// firstItem.textContent = "Ajax";
+// list.prepend(firstItem);
 
-// const animal = {
-//     eats: true,
-//   };
-//   const dog = Object.create(animal);
-//   dog.barks = true;
+// Видалення
 
-//   for (const key in dog) {
-//     if (!dog.hasOwnProperty(key)) continue;
+// const text = document.querySelector(".text");
+// text.remove();
 
-//     console.log(key); // barks
-//   }
-
-// const animal = {
-//     eats: true,
-//   };
-//   const dog = Object.create(animal);
-//   dog.barks = true;
-
-//   const dogKeys = Object.keys(dog);
-
-//   console.log(dogKeys); // ['barks']
+// Оптимізація роботи з DOM

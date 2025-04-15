@@ -1,277 +1,55 @@
-// Класи
-
-// Оголошення класу
-
-// class User {
-// Тіло класу
-//   }
-
-//   const mango = new User();
-//   console.log(mango); // {}
-
-//   const poly = new User();
-//   console.log(poly); // {}
-
-// Конструктор класу
-
-// class User {
-// Синтаксис оголошення методу класу
-//     constructor(name, email) {
-// Ініціалізація властивостей екземпляра
-//       this.name = name;
-//       this.email = email;
-//     }
-//   }
-
-//   const mango = new User("Манго", "mango@mail.com");
-//   console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
-
-//   const poly = new User("Поли", "poly@mail.com");
-//   console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
-
-// Об'єкт параметрів
-
-// class User {
-// Деструктуризуємо об'єкт
-//     constructor({ name, email }) {
-//       this.name = name;
-//       this.email = email;
-//     }
-//   }
-
-//   const mango = new User({
-//     name: "Манго",
-//     email: "mango@mail.com",
-//   });
-//   console.log(mango); // { name: "Манго", email: "mango@mail.com" }
-
-//   const poly = new User({
-//     name: "Поли",
-//     email: "poly@mail.com",
-//   });
-//   console.log(poly); // { name: "Поли", email: "poly@mail.com" }
-
-// Методи класу
-
-// class User {
-//     constructor({ name, email }) {
-//       this.name = name;
-//       this.email = email;
-//     }
-
-// Метод getEmail
-//     getEmail() {
-//       return this.email;
-//     }
-
-// Метод changeEmail
-//     changeEmail(newEmail) {
-//       this.email = newEmail;
-//     }
-//   }
-
-// Приватні властивості
-
-// class User {
-//     // Необов'язкове оголошення публічних властивостей
-//     name;
-//     // Обов'язкове оголошення приватних властивостей
-//     #email;
-
-//     constructor({ name, email }) {
-//       this.name = name;
-//       this.#email = email;
-//     }
-
-//     getEmail() {
-//       return this.#email;
-//     }
-
-//     changeEmail(newEmail) {
-//       this.#email = newEmail;
-//     }
-//   }
-
-//   const mango = new User({
-//     name: "Манго",
-//     email: "mango@mail.com",
-//   });
-//   mango.changeEmail("mango@supermail.com");
-//   console.log(mango.getEmail()); // mango@supermail.com
-//   console.log(mango.#email); // Виникне помилка, це приватна властивість
+// Властивість innerHTML
 
-// Геттери і сеттери
+// Читання
 
-// class User {
-//     #email;
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
 
-//     constructor({ name, email }) {
-//       this.name = name;
-//       this.#email = email;
-//     }
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
 
-// Геттер email
-//     get email() {
-//       return this.#email;
-//     }
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
 
-// Сеттер email
-//     set email(newEmail) {
-//       this.#email = newEmail;
-//     }
-//   }
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
 
-// const mango = new User({ name: "Манго", email: "mango@mail.com" });
-// console.log(mango.email); // mango@mail.com
-// mango.email = "mango@supermail.com";
-// console.log(mango.email); // mango@supermail.com
+// Зміна
 
-// set email(newEmail) {
-//     if(newEmail === "") {
-//       console.error("Помилка! Пошта не може бути порожнім рядком!");
-//       return;
-//     }
+// const title2 = document.querySelector(".article .title");
+// title2.innerHTML = 'New and <span class="accent">improved</span> title';
 
-//     this.#email = newEmail;
-//   }
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
 
-// Статичні властивості
+// const markup = technologies
+//   .map((technology) => `<li class="list-item">${technology}</li>`)
+//   .join("");
 
-// class User {
-// Оголошення та ініціалізація статичної властивості
-//     static Roles = {
-//       ADMIN: "admin",
-//       EDITOR: "editor",
-//     };
+// // Check the console, you'll see a single string with HTML tags
+// console.log(markup);
 
-//     #email;
-//     #role;
+// // Adding all the markup in one operation
+// list.innerHTML = markup;
 
-//     constructor({ email, role }) {
-//       this.#email = email;
-//       this.#role = role;
-//     }
+// Додавання
 
-//     get role() {
-//       return this.#role;
-//     }
+// const article2 = document.querySelector(".article");
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>`;
 
-//     set role(newRole) {
-//       this.#role = newRole;
-//     }
-//   }
+// // Replace += with = operator. See the difference?
+// // Article title is lost because we overwrite element content.
+// article2.innerHTML += htmlString;
 
-//   const mango = new User({
-//     email: "mango@mail.com",
-//     role: User.Roles.ADMIN,
-//   });
+// Метод insertAdjacentHTML()
 
-//   console.log(mango.Roles); // undefined
-//   console.log(User.Roles); // { ADMIN: "admin", EDITOR: "editor" }
+// const list = document.querySelector(".list");
 
-//   console.log(mango.role); // "admin"
-//   mango.role = User.Roles.EDITOR;
-//   console.log(mango.role); // "editor"
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
 
-// Статичні методи
-
-// class User {
-//     static #takenEmails = [];
-
-//     static isEmailTaken(email) {
-//       return User.#takenEmails.includes(email);
-//     }
-
-//     #email;
-
-//     constructor({ email }) {
-//       this.#email = email;
-//       User.#takenEmails.push(email);
-//     }
-//   }
-
-//   const mango = new User({ email: "mango@mail.com" });
-
-//   console.log(User.isEmailTaken("poly@mail.com"));
-//   console.log(User.isEmailTaken("mango@mail.com"));
-
-// Наслідування класів
-
-// class Child extends Parent {
-// ...
-//   }
-
-// class User {
-//     #email;
-
-//     constructor(email) {
-//       this.#email = email;
-//     }
-
-//     get email() {
-//       return this.#email;
-//     }
-
-//     set email(newEmail) {
-//       this.#email = newEmail;
-//     }
-//   }
-
-//   class ContentEditor extends User {
-// Тіло класу ContentEditor
-//   }
-
-//   const editor = new ContentEditor("mango@mail.com");
-//   console.log(editor); // { email: "mango@mail.com" }
-//   console.log(editor.email); // mango@mail.com
-
-// Конструктор дочірнього класу
-
-// class User {
-//   #email;
-
-//   constructor(email) {
-//     this.#email = email;
-//   }
-
-//   get email() {
-//     return this.#email;
-//   }
-
-//   set email(newEmail) {
-//     this.#email = newEmail;
-//   }
-// }
-
-// class ContentEditor extends User {
-//   constructor({ email, posts }) {
-// Виклик конструктора батьківського класу User
-//     super(email);
-//     this.posts = posts;
-//   }
-// }
-
-// const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
-// console.log(editor); // { email: 'mango@mail.com', posts: [] }
-// console.log(editor.email); // 'mango@mail.com'
-
-// Методи дочірнього класу
-
-// Уявімо, що вище є оголошення класу User
-
-// class ContentEditor extends User {
-//     constructor({ email, posts }) {
-//       super(email);
-//       this.posts = posts;
-//     }
-
-//     addPost(post) {
-//       this.posts.push(post);
-//     }
-//   }
-
-//   const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
-//   console.log(editor); // { email: 'mango@mail.com', posts: [] }
-//   console.log(editor.email); // 'mango@mail.com'
-//   editor.addPost("post-1");
-//   console.log(editor.posts); // ['post-1']
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");

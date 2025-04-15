@@ -1,28 +1,68 @@
-// Об'єктно-орієнтоване програмування
+//	Властивості та атрибути
 
-// const baseSalary = 30000;
-// const overtime = 10;
-// const rate = 20;
+const image = document.querySelector(".image");
+console.log(image.src); // https://picsum.photos/id/9/320/240
+console.log(image.alt); // A laptop
 
-// const getWage = (baseSalary, overtime, rate) => {
-//   return baseSalary + overtime * rate;
-// };
+image.src = "https://picsum.photos/id/13/640/480";
+image.alt = "River bank";
 
-// getWage(baseSalary, overtime, rate);
+// Властивість textContent
 
-// const employee = {
-//     baseSalary: 30000,
-//     overtime: 10,
-//     rate: 20,
-//     getWage() {
-//       return this.baseSalary + this.overtime * this.rate;
-//     },
-//   };
+const textEl = document.querySelector(".article-text");
+console.log(textEl.textContent); // text inside p.article-text
 
-//   employee.getWage();
+const titleEl = document.querySelector(".article-title");
+titleEl.textContent = "Welcome to Bahamas!";
 
-// Сутності ООП
+// Властивість classList
 
-// Екземпляр
+const link = document.querySelector(".link");
+console.log(link.classList);
 
-// Інтерфейс
+const hasActiveClass = link.classList.contains("is-active");
+console.log(`hasActiveClass - ${hasActiveClass}`);
+
+link.classList.add("special");
+console.log(link.classList);
+
+link.classList.remove("is-active");
+console.log(link.classList);
+
+link.classList.toggle("is-active");
+console.log(link.classList);
+
+link.classList.replace("special", "regular");
+console.log(link.classList);
+
+// Властивість style
+
+const button = document.querySelector(".btn");
+
+button.style.backgroundColor = "teal";
+button.style.fontSize = "24px";
+button.style.textAlign = "center";
+
+console.log(button.style); // inline styles object
+
+// Атрибути
+
+const image2 = document.querySelector(".image");
+
+console.log(image2.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
+
+console.log(image2.hasAttribute("src")); // true
+
+console.log(image2.getAttribute("alt")); // "Rocks and waterfall"
+
+image.setAttribute("alt", "Amazing nature");
+
+console.log(image2.getAttribute("alt")); // Amazing nature
+
+// data-атрибути
+
+const saveBtn = document.querySelector('.editor button[data-action="save"]');
+const closeBtn = document.querySelector('.editor button[data-action="close"]');
+
+console.log(saveBtn.dataset.action); //save
+console.log(closeBtn.dataset.action); //close

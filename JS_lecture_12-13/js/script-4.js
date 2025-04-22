@@ -66,3 +66,8 @@ const closeBtn = document.querySelector('.editor button[data-action="close"]');
 
 console.log(saveBtn.dataset.action); //save
 console.log(closeBtn.dataset.action); //close
+
+// •	value - містить поточний текстовий контент елементів форм.
+//•	checked - зберігає стан чекбокса або радіокнопки.
+//  •	name - зберігає значення, вказане в HTML-атрибуті name.
+//  •	src - шлях до зображення тегу <img>.

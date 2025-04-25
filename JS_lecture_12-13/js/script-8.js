@@ -26,7 +26,7 @@
 
 // singleBtn.addEventListener("click", handleClick);
 
-// // ===============================================
+// // // ===============================================
 // const multiBtn = document.querySelector("#multiple");
 
 // const firstCallback = () => {

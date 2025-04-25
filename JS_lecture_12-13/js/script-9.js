@@ -4,7 +4,7 @@
 //     console.log(event);
 //   };
 
-//   button.addEventListener("click", handleClick);
+// button.addEventListener("click", handleClick);
 
 // const button = document.querySelector(".btn");
 

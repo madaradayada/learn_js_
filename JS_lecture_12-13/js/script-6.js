@@ -26,10 +26,10 @@
 //   .map((technology) => `<li class="list-item">${technology}</li>`)
 //   .join("");
 
-// // Check the console, you'll see a single string with HTML tags
+// // // Check the console, you'll see a single string with HTML tags
 // console.log(markup);
 
-// // Adding all the markup in one operation
+// // // Adding all the markup in one operation
 // list.innerHTML = markup;
 
 // Додавання
@@ -43,6 +43,13 @@
 // article2.innerHTML += htmlString;
 
 // Метод insertAdjacentHTML()
+
+// elem.insertAdjacentHTML(position, string);
+
+// •	"beforebegin" - перед elem
+// •	"afterbegin" - всередині elem, перед усіма дітьми
+// beforeend" - всередині elem, після усіх дітей
+// afterend" - після elem
 
 // const list = document.querySelector(".list");
 

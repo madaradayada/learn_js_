@@ -19,12 +19,12 @@
 // button.addEventListener("click", onClick);
 
 // const greet = () => {
-//     console.log("Hello!");
-//   };
+//   console.log("Hello!");
+// };
 
-//   const timerId = setTimeout(greet, 3000);
+// const timerId = setTimeout(greet, 3000);
 
-//   clearTimeout(timerId);
+// clearTimeout(timerId);
 
 // Інтервал
 

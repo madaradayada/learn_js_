@@ -1,5 +1,5 @@
 /* 3 */
-/* body {
+body {
   margin: 16px;
   line-height: 1.5;
   color: #212121;
@@ -18,11 +18,11 @@ p {
 
 .user-list li:not(:last-child) {
   margin-bottom: 16px;
-} */
+}
 
 /* 5 */
 
-body {
+/* body {
   margin: 16px;
   line-height: 1.5;
   color: #212121;
@@ -52,4 +52,4 @@ p {
 
 .post-title:first-letter {
   text-transform: uppercase;
-}
+} */

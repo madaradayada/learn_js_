@@ -81,11 +81,11 @@
 
 // Прийом «Завантажити ще»
 
-const fetchPostsBtn = document.querySelector(".btn");
-const postList = document.querySelector(".posts");
+// const fetchPostsBtn = document.querySelector(".btn");
+// const postList = document.querySelector(".posts");
 
 // Controls the group number
-let page = 1;
+// let page = 1;
 // Controls the number of items in the group
 // let perPage = 10;
 
